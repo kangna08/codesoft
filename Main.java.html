@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #ed864a;}
+.s1 { color: #ebebeb;}
+.s2 { color: #ed864a; font-weight: bold;}
+.s3 { color: #33ccff; font-weight: bold;}
+.s4 { color: #54b33e;}
+</style>
+</head>
+<body bgcolor="#131314">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s2">;</span>
+<span class="s0">public class </span><span class="s1">Main {</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+
+
+                <span class="s0">int </span><span class="s1">balance = </span><span class="s3">10000</span><span class="s2">, </span><span class="s1">withdraw</span><span class="s2">, </span><span class="s1">deposit</span><span class="s2">;</span>
+                <span class="s1">Scanner s = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s2">;</span>
+                <span class="s0">while</span><span class="s1">(</span><span class="s0">true</span><span class="s1">)</span>
+                <span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s4">&quot;Automated Teller Machine&quot;</span><span class="s1">)</span><span class="s2">;</span>
+                    <span class="s1">System.out.println(</span><span class="s4">&quot;Choose 1 for Withdraw&quot;</span><span class="s1">)</span><span class="s2">;</span>
+                    <span class="s1">System.out.println(</span><span class="s4">&quot;Choose 2 for Deposit&quot;</span><span class="s1">)</span><span class="s2">;</span>
+                    <span class="s1">System.out.println(</span><span class="s4">&quot;Choose 3 for Check Balance&quot;</span><span class="s1">)</span><span class="s2">;</span>
+                    <span class="s1">System.out.println(</span><span class="s4">&quot;Choose 4 for EXIT&quot;</span><span class="s1">)</span><span class="s2">;</span>
+                    <span class="s1">System.out.print(</span><span class="s4">&quot;Choose the operation you want to perform:&quot;</span><span class="s1">)</span><span class="s2">;</span>
+                    <span class="s0">int </span><span class="s1">n = s.nextInt()</span><span class="s2">;</span>
+                    <span class="s0">switch</span><span class="s1">(n)</span>
+                    <span class="s1">{</span>
+                        <span class="s0">case </span><span class="s3">1</span><span class="s1">:</span>
+                            <span class="s1">System.out.print(</span><span class="s4">&quot;Enter money to be withdrawn:&quot;</span><span class="s1">)</span><span class="s2">;</span>
+                            <span class="s1">withdraw = s.nextInt()</span><span class="s2">;</span>
+                            <span class="s0">if</span><span class="s1">(balance &gt;= withdraw)</span>
+                            <span class="s1">{</span>
+                                <span class="s1">balance = balance - withdraw</span><span class="s2">;</span>
+                                <span class="s1">System.out.println(</span><span class="s4">&quot;Please collect your money&quot;</span><span class="s1">)</span><span class="s2">;</span>
+                            <span class="s1">}</span>
+                            <span class="s0">else</span>
+                            <span class="s1">{</span>
+                                <span class="s1">System.out.println(</span><span class="s4">&quot;Insufficient Balance&quot;</span><span class="s1">)</span><span class="s2">;</span>
+                            <span class="s1">}</span>
+                            <span class="s1">System.out.println(</span><span class="s4">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span>
+                            <span class="s0">break</span><span class="s2">;</span>
+
+                        <span class="s0">case </span><span class="s3">2</span><span class="s1">:</span>
+                            <span class="s1">System.out.print(</span><span class="s4">&quot;Enter money to be deposited:&quot;</span><span class="s1">)</span><span class="s2">;</span>
+                            <span class="s1">deposit = s.nextInt()</span><span class="s2">;</span>
+                            <span class="s1">balance = balance + deposit</span><span class="s2">;</span>
+                            <span class="s1">System.out.println(</span><span class="s4">&quot;Your Money has been successfully depsited&quot;</span><span class="s1">)</span><span class="s2">;</span>
+                            <span class="s1">System.out.println(</span><span class="s4">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span>
+                            <span class="s0">break</span><span class="s2">;</span>
+
+                        <span class="s0">case </span><span class="s3">3</span><span class="s1">:</span>
+                            <span class="s1">System.out.println(</span><span class="s4">&quot;Balance : &quot;</span><span class="s1">+balance)</span><span class="s2">;</span>
+                            <span class="s1">System.out.println(</span><span class="s4">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span>
+                            <span class="s0">break</span><span class="s2">;</span>
+
+                        <span class="s0">case </span><span class="s3">4</span><span class="s1">:</span>
+                            <span class="s1">System.exit(</span><span class="s3">0</span><span class="s1">)</span><span class="s2">;</span>
+                    <span class="s1">}</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+</pre>
+</body>
+</html>
